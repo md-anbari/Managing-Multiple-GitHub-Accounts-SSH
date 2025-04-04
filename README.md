@@ -62,7 +62,9 @@ Host github.com-personal
 When cloning your personal repositories, you now have to use:
 
 ```bash
-git clone git@github.com-personal:your-username/your-repo.git
+git clone git@github.com:your-username/your-repo.git
+git remote set-url origin git@github.com-personal:your-username/your-repo.git
+
 ```
 
 Your work repositories continue to use:
@@ -75,6 +77,10 @@ This way, SSH will pick the correct key automatically based on the **host alias*
 
 ### Drawback:
 You must remember to use the custom alias `github.com-personal` whenever you clone or update remotes of personal repositories.
+That's needed to change the remote path like above: 
+```bash
+git remote set-url origin git@github.com-personal:your-username/your-repo.git
+```
 
 ---
 
